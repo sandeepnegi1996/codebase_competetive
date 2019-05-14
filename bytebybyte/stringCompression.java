@@ -31,9 +31,14 @@ class TestClass
                 x=strarr[i];
                 compressedStr.append(Character.toString(x));
             }
+           
+
+
             
             
         }
+        compressedStr.append(countrepetition+"");
+        
         System.out.println(compressedStr);
     }
 }
