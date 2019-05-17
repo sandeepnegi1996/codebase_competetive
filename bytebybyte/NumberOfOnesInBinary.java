@@ -22,6 +22,16 @@ class TestClass
         
         return 0;
     }
+
+    public int numberOfones(String binary)
+    {
+        while (num>0) 
+        {
+            
+            num=num&(num-1);    
+        }
+        return 0;
+    }
     public static void main(String[] args) {
         //System.out.println("hello world");
         Scanner s=new Scanner(System.in);
