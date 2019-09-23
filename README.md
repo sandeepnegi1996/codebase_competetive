@@ -36,3 +36,32 @@ and then use equals method to check whether both are equal or not
         }
 ```
 
+2. second approach to solve this problem is compare first with the last and then increae the start
+and decrease the last if this occur flawlessly than its cool otherwise it is not a palindrome
+
+```java
+ public static void secondApproach(String s){
+        int start=0;
+        int end=s.length()-1;
+        int flag=0;
+        while (start<end) {
+            if (s.charAt(start)==s.charAt(end)) {
+                start++;
+                end--;
+                
+            } else {
+                flag=1;
+                break;
+            }   
+            
+        }
+        if (flag==0) {
+            System.out.println(" palindrome");
+        }
+        else{
+            System.out.println("not a palindrome");
+        }
+
+    }
+```
+
