@@ -65,3 +65,27 @@ and decrease the last if this occur flawlessly than its cool otherwise it is not
     }
 ```
 
+3. Reversing the string 
+ 1. **reversing iteratively** traverse the string from reverse and add each element from the reverse to a new string
+```java
+  public static void stringReverseIterative(String s){
+        String s1="";
+        
+        for (int i = s.length()-1; i >=0 ; i--) 
+            s1+=s.charAt(i);
+        
+        System.out.println(s1);
+
+    }
+
+```
+ 2. **Reversing recursively** take last character and again call the funtion with smaller string
+```java
+public static String stringReverseRecursively(String s){
+
+        if (s.isEmpty() || s==null) 
+            return s;
+            
+        return s.charAt(s.length()-1)+stringReverseRecursively(s.substring(0, s.length()-1));
+    }
+```
