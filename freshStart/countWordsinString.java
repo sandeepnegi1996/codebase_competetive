@@ -18,6 +18,8 @@ class test{
         Scanner scan=new Scanner(System.in);
         String str=scan.nextLine();
        
+            // by converting the string to char Array then comparing each array element with the ' '
+            //i have count the spaces and then returned with an increment to give the words
         countWords(str);
     }
 }

@@ -123,3 +123,65 @@ public static String stringReverseRecursively(String s){
 
     }
 ```
+
+#### Ques4. frequency of each character in a string
+    *Solution :- use hashmap key will be character and value will be count of each
+                so we check whether character is present or not if it is not present 
+                put the char in the hashmap with key value to be 1 if it is present get the value
+                corresponding to the key and add one in the value and put in the hashmap
+
+    ```java
+     public static void countAlphabetFrequency(String str){
+        HashMap<Character,Integer> map=new HashMap<Character,Integer>();
+
+        for (int i = 0; i < str.length(); i++) {
+            
+            char letter=str.charAt(i);
+            int count=0;
+            if (map.containsKey(letter)) {
+                count=map.get(letter);
+                ++count;
+                map.put(letter, count);
+            }
+            else{
+                map.put(letter, 1);
+            }
+            
+        }
+        for (Map.Entry element : map.entrySet()) {
+            System.out.println(element.getKey()+" "+element.getValue());
+        }
+        
+    }
+    ```
+
+#### ques5. nth fibonacchi
+
+#### Ques7. Array sum of two elements
+
+#### Ques 8. Reverse a number and check palindrome
+    Solution. remainder will be num%10 and num/10 will decrease the num size
+```java
+ public static boolean checkPalindromeNum(int n){
+        int rev=0;int rem=0;
+        int originalNum=n;
+        while (n>0) {
+            rem=0;
+            rem=n%10;
+            rev=rem+rev*10;
+            n/=10;
+            
+        }
+        if (originalNum==rev) {
+            return true;
+            
+        } else {
+            return false;
+        }
+
+    }
+```
+
+#### Ques 9. Program to print fibonacci series
+
+    *
