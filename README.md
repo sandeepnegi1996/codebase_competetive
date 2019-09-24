@@ -13,7 +13,7 @@
 ##### My Learnings:-
 
 
-## Ques1. check palindrome of a given string
+#### Ques1. check palindrome of a given string
 
 1. get the string input put the string in string buffer and then apply the reverse function
 and then use equals method to check whether both are equal or not 
@@ -65,7 +65,7 @@ and decrease the last if this occur flawlessly than its cool otherwise it is not
     }
 ```
 
-3. Reversing the string 
+#### Ques2. Reversing the string 
  1. **reversing iteratively** traverse the string from reverse and add each element from the reverse to a new string
 ```java
   public static void stringReverseIterative(String s){
@@ -87,5 +87,39 @@ public static String stringReverseRecursively(String s){
             return s;
             
         return s.charAt(s.length()-1)+stringReverseRecursively(s.substring(0, s.length()-1));
+    }
+```
+
+
+#### Ques3.Write a Java Program to swap two numbers without using the third variable.
+    * Solution. store the multiplication of both the number in a and then to find b divide a*b/b this will give a put this is b
+
+```java
+    public static void swapWithoutTemp(int a,int b){
+        a=a*b;
+        b=a/b;
+        a=a/b;
+
+        System.out.println(a+" "+b);
+    }
+```
+
+#### Ques4. count number of words in a string
+    * Approach 1. by converting the string to char Array then comparing each array element with the ' ' 
+    i have count the spaces and then returned with an increment to give the words
+
+```java
+      public static void countWords(String str){
+        char arr[]=str.toCharArray();
+        int count=0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]==' ') {
+                count++;
+            }
+            
+        }
+        System.out.println(++count);
+        
+
     }
 ```
