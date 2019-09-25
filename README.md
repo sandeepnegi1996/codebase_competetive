@@ -183,5 +183,52 @@ public static String stringReverseRecursively(String s){
 ```
 
 #### Ques 9. Program to print fibonacci series
+    * using memorization we will be storing the previous results in the array
 
-    *
+```java
+ public static void fibonacciMemorization(int first,int second,int n){
+
+        
+        int arr[]=new int[n];
+        arr[0]=first;
+        arr[1]=second;
+
+        for (int i = 2; i < n; i++) {
+            arr[i]=arr[i-1]+arr[i-2];
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i]+" ");
+            
+        }
+    } 
+```
+
+#### Ques 10. Different ways to print arraylist
+
+```java
+  ArrayList list=new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        Iterator itr= list.iterator();
+        while (itr.hasNext()) {
+            System.out.print(itr.next()+" ");         
+        }
+        System.out.println();
+        for (Object obj : list) {
+            System.out.print(obj+" ");
+            
+        }
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));          
+        }
+
+```
+
+
+#### Q #11 Write a Java Program to find the duplicate characters in a string.
+#### Q #12) Write a Java Program to find the second highest number in an array.
+#### Q #13) Write a Java Program to find the third highest number in an array.
+#### Q #14) Write a Java Program to find the nth highest number in an array.
+#### Q #15) Factorial
