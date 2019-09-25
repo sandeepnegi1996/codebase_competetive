@@ -228,7 +228,34 @@ public static String stringReverseRecursively(String s){
 
 
 #### Q #11 Write a Java Program to find the duplicate characters in a string.
-#### Q #12) Write a Java Program to find the second highest number in an array.
-#### Q #13) Write a Java Program to find the third highest number in an array.
-#### Q #14) Write a Java Program to find the nth highest number in an array.
-#### Q #15) Factorial
+####  **important** Q #12) Write a Java Program to find the kth highest largest or kth smaller in an array.
+    * brute force :- approach second min should be greater than the first min and and third min should be greater than the second and third min
+    
+```java
+    
+    public static void kthSmallestBruteForce(int arr[],int k)
+    {
+        // // Todo: first find the first minimum
+        int min=Integer.MAX_VALUE;
+        int min1=Integer.MAX_VALUE;
+        
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]<min1){
+                min1=arr[i];
+
+            }
+
+        }
+        int min2=Integer.MAX_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]<min2  && arr[i]>min1) {
+                min2=arr[i];
+            
+            }
+            
+        }
+        System.out.println(min1 +" "+min2);
+    }
+    ```
+#### Q #13) Factorial
