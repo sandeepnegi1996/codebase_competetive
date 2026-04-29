@@ -38,7 +38,7 @@ public class FirstNonRepeatingChar {
      //       Set<Map.Entry<Integer,Integer>> entries=  map.entrySet();
 
 Optional<Character> optionalIsFirstNonRepeating = map.entrySet().stream()
-        .filter(entry -> entry.getValue().toString().equals("1") )
+        .filter(entry -> entry.getValue().equals(1) )
         .map(Map.Entry::getKey)
         .findFirst();
 
